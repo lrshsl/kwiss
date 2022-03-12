@@ -22,6 +22,7 @@ I'd welcome any kind of suggestions (e. g. codestyle, application design, ..), i
 > I made this application for personal use only and I can't claim that I understand what I'm doing.
 > The following instructions are primarily for me - so I don't forget which commands to run.
 
+
 ```fish
 git clone (this url)
 cd kwiss-android
