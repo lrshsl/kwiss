@@ -1,0 +1,17 @@
+<textinp>:
+	title: 'InputDialog'
+	auto_dismiss: False
+	id: test1
+
+	RelativeLayout:
+		orientation: 'vertical'
+		pos: self.pos
+		size: root.size
+		id: test2
+
+		TextInput:
+			id: input
+			hint_text:'Enter any text'
+			pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+			size_hint: 0.4, 0.05
+			on_text: app.process()
