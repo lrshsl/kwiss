@@ -1,2 +1,7 @@
 # kwiss
-(NOT WORKING) Project for learning kivy. A quiz app for creating &amp;&amp; learning vocaulary sets, written entirely in python.
+(currently **NOT WORKING**) Project for learning kivy. A simple Quiz app.
+
+
+## Incentive / Purpose
+
+I started this project to learn the basics of both the python module [Kivy](https://kivy.org/#home) and git/github.
