@@ -1,12 +1,10 @@
-from typing import Generator, Iterable, Union
-
 
 class QuestionPair:
     def __init__(self, question='', answer=list()):
         self.question = self._check_word(question)
         self.answer = self._check(answer)
 
-    def _check( self, to_check):
+    def _check(self, to_check):
         return self._check_word(to_check) if \
             isinstance(to_check, str) else self._check_iterable(to_check)
 
