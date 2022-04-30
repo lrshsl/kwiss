@@ -1,0 +1,24 @@
+<textinp>:
+	title: 'InputDialog'
+	auto_dismiss: False
+	id: text_input
+
+	RelativeLayout:
+		orientation: 'vertical'
+		pos: self.pos
+		size: root.size
+
+		Label:
+			id: question_label
+			text: app.generate_question()
+			font_size: '30sp'
+			size: self.texture_size
+
+		TextInput:
+			id: input
+			hint_text: 'Enter your answer here'
+			pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+			size_hint: 0.6, 0.06
+			focus: True
+			on_text_validate: app.process()
+			multiline: False
