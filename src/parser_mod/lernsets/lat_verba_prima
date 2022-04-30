@@ -1,0 +1,10 @@
+
+word_definition_separator: '='
+
+%%
+
+
+Nomina {
+    curia = Rathaus, Kurie
+    turba = Menschenmenge, Lärm
+}
