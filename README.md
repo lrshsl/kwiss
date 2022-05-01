@@ -2,7 +2,7 @@
 # Kwiss
 
 A Project for learning kivy. 
-It's a basic Quiz app: You can define question and answer and start to learn (see *[Build](#Build)*)
+It's a basic Quiz app: You can define question and answer and start to learn (see *[Build](#Build "Goto section 'Build'")*)
 
 
 
