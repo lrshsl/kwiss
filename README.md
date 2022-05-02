@@ -2,7 +2,7 @@
 # Kwiss
 
 A Project for learning kivy. 
-It's a basic Quiz app: You can define question and answer and start to learn (see *[Build](#Build "Goto section 'Build'")*)
+It's a basic Quiz app: Just define question and answer and start to learn (see *[Build](#Build "Goto section 'Build'")*)
 
 
 
@@ -32,3 +32,30 @@ vim ./release/buildozer.spec
 buildozer -v android debug
 buildozer android deploy run
 ```
+
+By the time I wrote this, there's no way of defining vocabulary sets (or any 'question-answer pairs') from within the running application.
+One'd have to add them to '[src/resource/lat.py](https://github.com/lrshsl/kwiss/blob/android/src/resource/lat.py "Open File")', before compiling.
+In parser_mod though, there's a parser which is capable of translating some formats to the needed format.
+
+
+
+## Progress
+
+- [X] Basic functionality
+  - [X] Show question
+  - [X] Get input
+  - [X] Process input
+  - [X] React(false: again, true: next)
+
+- [ ] Asthetics
+  - [ ] Loading screen
+  - [ ] Start screen
+  - [ ] Transitions?
+
+- [ ] Additional functionality
+  - [ ] Tolerance (What answers to accept)
+  - [ ] Add questions from within the app
+
+- [ ] Settings
+  - [ ] Tolerance (What answers to accept)
+  - [ ] Look & Feel?
