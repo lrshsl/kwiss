@@ -1,0 +1,65 @@
+word_definition_separator: '='
+
+%%
+
+content {
+
+sententia               = Antrag, Meinung, Satz, Sinn
+
+bellum                  = Krieg
+oppidum                 = befestigter Platz, Stadt
+proelium                = Kampf, Schlacht
+
+labor                   = Anstrengung, Arbeit
+censor                  = Zensor
+consul                  = Konsul
+miles                   = Soldat
+legio                   = Legion
+ops                     = Hilfe, Kraft, Macht, Mittel, Reichtum
+caput                   = Kopf, Haupt, Hauptstadt
+moenia                  = (Stadt-)Mauern
+
+altus                   = hoch, tief
+vivus                   = lebend, lebendig
+
+meus                    = mein
+tuus                    = dein
+suus                    = sein, ihr, seine, ihre
+noster                  = unser
+vester                  = euer
+
+alius                   = ein anderer
+unus                    = ein(er), ein einziger
+cuncti                  = alle
+
+
+# Page 2
+
+narrare                 = erzaehlen
+restare                 = uebrig bleibem, Widerstand leisten
+
+censere                 = meinen, einschaetzen
+manere                  = bleiben, warten
+
+amittere                = aufgeben, verlieren
+animadvertere           = bemerken, wahrnehmen
+premere                 = (unter-)druecken, bedraengen
+
+vincere                 = (be-)siegen, uebertreffen
+
+aperire                 = aufdecken, oeffnen
+
+e/ex                    = aus etw, von etw her
+
+postquam                = nachdem
+non solum .. sed etiam  = nicht nur .. sondern auch
+quoque                  = auch
+
+equidem                 = (ich) allerdings, freilich
+solum                   = nur
+vero                    = aber
+
+alius .. alius          = der eine .. der andere
+Romam                   = nach Rom
+
+}

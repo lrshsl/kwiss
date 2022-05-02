@@ -1,12 +1,12 @@
 import kivy
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
-from kivy.properties import StringProperty, BooleanProperty, Property
+from kivy.properties import StringProperty, BooleanProperty, NumericProperty, Property
 from kivy.clock import Clock
 
 
 from src.quiz import Quiz
-from src.lernsets.lat import verba_prima
+from src.resource import lat
 from src.utils import Color
 
 
@@ -17,8 +17,8 @@ class MainActivity(BoxLayout):
     current_question = StringProperty("No question available")
     label_color = Property(Color.white)
     textinput_focused = BooleanProperty(False)
-    score = Property(0)
-    progress = Property(0)
+    score = NumericProperty(0)
+    progress = NumericProperty(0)
 
     def __init__(self, **kwargs):
         self.initialize_quiz()
@@ -27,7 +27,7 @@ class MainActivity(BoxLayout):
         self.first_guess = True
 
     def initialize_quiz(self):
-        self.quiz = Quiz(verba_prima)
+        self.quiz = Quiz(RESOURCE)
 
     def generate_question(self):
         self.current_question = self.quiz.new_question()
@@ -36,7 +36,6 @@ class MainActivity(BoxLayout):
         if len(text_input.text) and text_input.text[-1] == '\n':
             self.on_enter(text_input.text)
             text_input.text = ''
-        return 100
 
     def on_enter(self, answer):
         print('enter')
@@ -62,33 +61,13 @@ class MainActivity(BoxLayout):
         self.textinput_focus = True
 
 
-class MainApp(App):
+class Kwiss(App):
 
     def build(self):
         return MainActivity()
 
 
-"""
-    def build(self):
-        self.quiz = self.initialize_quiz()
-        return Widget()
-
-    def on_text_validate(self):
-        text = self.root.ids.input.text
-        self.root.ids.input.text = ''
-        Clock.schedule_once(self.set_focus, 0.2)
-
-        if self.quiz.is_correct(text):
-            print(f'correct! {text}')
-            self.root.ids.question_label.text = self.generate_question()
-        else:
-            print(f'false: {text}')
-
-    def set_focus(self, event):
-        self.root.ids.input.focus = True
-"""
-
-
 # Run the App
 if __name__ == "__main__":
-    MainApp().run()
+    RESOURCE = lat.verba_undecima
+    Kwiss().run()

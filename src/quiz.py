@@ -5,17 +5,22 @@ from src.utils import QuestionPair, String
 
 class Quiz:
     def __init__(self, src, settings=dict()):
-        self.src = list(src)
+        src = list(src)
+        random.shuffle(src)
+        self.src = src
+        self.src_generator = (pair for pair in self.src)
         self.nb_questions = len(self.src)
         self.settings = settings
         self.pair = QuestionPair()
-        self.count = 0
 
     def new_question(self):
-        if self.count == self.nb_questions + 1:
-            return 'You\'r through!\nRestart?'
-        self.pair = random.choice(self.src)
-        self.count += 1
+        try:
+            self.pair = next(self.src_generator)
+        except StopIteration:
+            self.pair = QuestionPair(
+                'You\'re thru!\nRestart?',
+                'yeah!'
+            )
         return self.pair.question
 
     def is_correct(self, answer):

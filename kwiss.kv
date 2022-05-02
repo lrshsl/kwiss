@@ -21,7 +21,6 @@
 		text: root.current_question
 		color: root.label_color
 		font_size: '30sp'
-		#size: self.texture_size
 
 
     GridLayout:
@@ -29,7 +28,6 @@
         cols: 2
 
         TextInput:
-            id: textinput
             hint_text: "Enter your answer here"
             on_text: root.on_text(self)
             size_hint: .9, 1
