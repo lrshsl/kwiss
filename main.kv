@@ -1,24 +1,43 @@
-<textinp>:
-	title: 'InputDialog'
-	auto_dismiss: False
-	id: text_input
+#:kivy 1.9.0
 
-	RelativeLayout:
-		orientation: 'vertical'
-		pos: self.pos
-		size: root.size
+<MainActivity>:
+	orientation: "vertical"
 
+	GridLayout:
+        size_hint: 1, .06
+        cols: 3
+		spacing: "8dp"
+		padding: [1, 1, 1, 1]
+	
 		Label:
-			id: question_label
-			text: app.generate_question()
-			font_size: '30sp'
-			size: self.texture_size
+			size_hint: .1, 1
+			text: str(root.score)
 
-		TextInput:
-			id: input
-			hint_text: 'Enter your answer here'
-			pos_hint: {'center_x': 0.5, 'center_y': 0.8}
-			size_hint: 0.6, 0.06
-			focus: True
-			on_text_validate: app.process()
-			multiline: False
+		ProgressBar:
+            size_hint: .7, 1
+			value: root.progress
+
+	Label:
+		text: root.current_question
+		color: root.label_color
+		font_size: '30sp'
+		#size: self.texture_size
+
+
+    GridLayout:
+        size_hint: 1, .1
+        cols: 2
+
+        TextInput:
+            id: textinput
+            hint_text: "Enter your answer here"
+            on_text: root.on_text(self)
+            size_hint: .9, 1
+            focus: True
+            #on_text_validate: root.on_input_text_validate(self)
+            #pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+            multiline: True  # No defocus
+
+        Button:
+            text: "Enter"
+            size_hint: 0.1, 1

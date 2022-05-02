@@ -26,3 +26,15 @@ class String:
             line = line.strip(' \t\r\n')
             if len(line):
                 yield(line)
+
+
+class Color:
+    white = 1, 1, 1, 1
+    black = 0, 0, 0, 1
+
+    pure_green = 0, 1, 0, 1
+    light_green = .5, .9, .5
+    green = .3, .6, .3, 1
+    dark_green = .1, .4, .1, 1
+
+    red = 1, .1, .1, 1
